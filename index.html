@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0px;
+        }
+       nav {
+background-color: black;
+color: white;
+display: flex;
+align-items: center;
+justify-content: space-around;
+}
+h1 {
+margin: 0px;
+color: white;
+}
+h2{
+    margin-top: 0px;
+}
+ul{
+    display: flex;
+}
+a {
+text-decoration: none;
+}
+li {
+list-style-type: none;
+padding-left: 16px;
+color: white;
+}
+.cards {
+display: flex;
+flex-wrap: wrap;
+gap: 10px;
+}
+.card {
+width: 150px;
+border: solid 1px #ddd;
+border-radius: 7px;
+padding: 10px;
+}
+span {
+font-size: x-large;
+}
+button {
+padding: 10px 20px 10px 20px;
+color: white;
+background-color: rgb(0, 156, 255);
+border: none;
+border-radius: 5px;
+margin-top: 8px;
+}
+#filter {
+width: 150px;
+height: 30px;
+background-color: black;
+color: white;
+margin: 10px 0px;
+}
+label {
+padding-left: 235px;
+}
+    </style>
+</head>
+<body>
+    <div class="content">
+        <div>
+        <nav>
+            <div class="heading"><a href="#"><h1>Home</h1></a></div>
+            <div class="menu">
+                <ul>
+                    <a href="#"><li>menu</li></a>
+                    <a href="#"><li>about us</li></a>
+                    <a href="#"><li>contact us</li></a>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <div class="filter">
+        <form > 
+        <label for="filter">choose :</label>
+    <select id="filter">
+    <option name="all" value="all">all</option>
+    <option value="grocery">grocery</option>
+    <option value="fitness">fitness</option>
+    <option value="Electronics">Electronics</option>
+    <option value="perfumes">perfumes</option>
+  </select>
+    </form>
+    </div>
+    <div class="cards">
+        <div class="card perfumes">
+            <h2>oud</h2>
+        <span id="price">$252</span><br>
+        <button>Buy</button>
+        </div>
+
+        <div class="card perfumes">
+            <h2>LV</h2>
+        <span id="price">$2220</span><br>
+        <button>Buy</button>
+        </div>
+
+        <div class="card perfumes">
+            <h2>gucci</h2>
+        <span id="price">$1000</span><br>
+        <button>Buy</button>
+        </div>
+
+        <div class="card perfumes">
+            <h2>dior</h2>
+        <span id="price">$2992</span><br>
+        <button>Buy</button>
+        </div>
+
+        <div class="card electronics">
+            <h2>iron</h2>
+        <span id="price">$22</span><br>
+        <button>Buy</button>
+        </div>
+
+        <div class="card electronics">
+            <h2>Wireless Headphones</h2>
+        <span id="price">$2012</span><br>
+        <button>Buy</button>
+        </div>
+
+        <div class="card electronics">
+            <h2>ac</h2>
+        <span id="price">$2002</span><br>
+        <button>Buy</button>
+        </div>
+
+        <div class="card electronics">
+            <h2>projector</h2>
+        <span id="price">$2200</span><br>
+        <button>Buy</button>
+        </div>
+
+        <div class="card electronics">
+            <h2>tv</h2>
+        <span id="price">$1122</span><br>
+        <button>Buy</button>
+        </div>
+
+        <div class="card electronics">
+            <h2>Headphones</h2>
+        <span id="price">$202</span><br>
+        <button>Buy</button>
+        </div>
+
+        <div class="card electronics">
+            <h2>mobile</h2>
+        <span id="price">$2222</span><br>
+        <button>Buy</button>
+        </div>
+
+        <div class="card fitness">
+            <h2>punch bag</h2>
+        <span id="price">$220</span><br>
+        <button>Buy</button>
+        </div>
+
+        <div class="card fitness">
+            <h2>cycle</h2>
+        <span id="price">$5</span><br>
+        <button>EleBuyctronics</button>
+        </div>
+
+        <div class="card fitness">
+            <h2>rope</h2>
+        <span id="price">$2</span><br>
+        <button>Buy</button>
+        </div>
+
+        <div class="card fitness">
+            <h2>dumble</h2>
+        <span id="price">$20</span><br>
+        <button>Buy</button>
+        </div>
+
+        <div class="card fitness">
+            <h2>treadmil</h2>
+        <span id="price">$122</span><br>
+        <button>Buy</button>
+        </div>
+
+        <div class="card grocery">
+            <h2>sugar</h2>
+        <span id="price">$4</span><br>
+        <button>Buy</button>
+        </div>
+
+        <div class="card grocery">
+            <h2>ghee</h2>
+        <span id="price">$6</span><br>
+        <button>Buy</button>
+        </div>
+
+        <div class="card grocery">
+            <h2>patato</h2>
+        <span id="price">$1</span><br>
+        <button>Buy</button>
+        </div>
+
+        <div class="card grocery">
+            <h2>rice</h2>
+        <span id="price">$3</span><br>
+        <button>Buy</button>
+        </div>
+
+        <div class="card grocery">
+            <h2>dal</h2>
+        <span id="price">$2</span><br>
+        <button>Buy</button>
+        </div>
+
+    </div>
+    </div>
+
+</body>
+
+<script>
+const cardsContainer = document.querySelector(".cards");
+const allCards = Array.from(document.querySelectorAll(".card"));
+const filterSelect = document.getElementById("filter");
+
+filterSelect.addEventListener("change", () => {
+  const value = filterSelect.value.toLowerCase();
+
+  allCards.forEach(card => {
+    if (value === "all" || card.classList.contains(value)) {
+      card.style.display = "block";
+    } else {
+      card.style.display = "none";
+    }
+  });
+});
+</script>
+
+</html>
